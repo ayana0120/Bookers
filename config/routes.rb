@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   post "books" => "books#create"
   get "books/:id" => "books#show", as: "books"
   get "books/:id/edit" => "books#edit", as: "edit_books"
+  patch "books/:id" => "books#update", as: "update_books"
 end
