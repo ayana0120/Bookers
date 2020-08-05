@@ -1,7 +1,12 @@
-  <h4 class="show">Title</h4><p>:<%= @book.title %></p>
-  <h4 class="show">body</h4><p>:<%= @book.body %></p>
-
-  <%= link_to "Edit", edit_books_path(@book.id) %>
-  <%= link_to "Back", index_path %>
-
+<table cellspacing="10">
+  <tr>
+    <td><b>Title:</b></td>
+    <td><%= @book.title %></td>
+  </tr>
+  	<td><b>Body:</b></td>
+  	<td><%= @book.body %></td>
+    </tr>
+  </table>
+  <%= link_to "Edit", edit_book_path(@book) %>
+  <%= link_to "Back", books_path %>
 
