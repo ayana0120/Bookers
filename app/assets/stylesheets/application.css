@@ -27,7 +27,7 @@ clearfix::after {
   font-size: 26px;
   margin: 25px 35px 5px;
 }
-a, .top-text, .show {
+.start, .top-text, .show {
   font-size: 13px;
   margin: 0px 65px;
   line-height: 4;
@@ -35,21 +35,15 @@ a, .top-text, .show {
 main {
   margin-left: 35px;
 }
-.index-title {
-  width: 150px;
+th {
   text-align: center;
-  float: left;
 }
-.index-body {
+.title {
+  width: 150px;
+}
+.body {
   width: 450px;
-  text-align: center;
-  float: left;
 }
-.title-text {
-  width: 150px;
-  float: left;
-}
-.body-text {
-  width: 150px;
-  float: left;
+.index {
+  font-size: 13px;
 }
