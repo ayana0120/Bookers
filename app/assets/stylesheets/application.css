@@ -27,12 +27,16 @@ clearfix::after {
   font-size: 26px;
   margin: 25px 35px 5px;
 }
-.start, .top-text, .show {
+.start, .top-text, .show, .show-page {
   font-size: 13px;
   margin: 0px 65px;
-  line-height: 4;
+  line-height: 3;
 }
-main {
+.edit-page {
+  margin: 20px 0px 0px 35px ;
+  line-height: 2;
+}
+.index-page {
   margin-left: 35px;
 }
 th {
@@ -44,6 +48,11 @@ th {
 .body {
   width: 450px;
 }
-.index {
+.index, .edit {
   font-size: 13px;
+}
+.menu {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
 }
