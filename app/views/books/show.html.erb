@@ -1,3 +1,4 @@
+<main class="show-page">
 <% if flash[:complete] %>
   <div class="flash">
     <%= flash[:complete] %>
@@ -12,6 +13,12 @@
   	<td><%= @book.body %></td>
     </tr>
   </table>
+  <div class="menu">
   <%= link_to "Edit", edit_book_path(@book) %>
+  </div>
+  |
+  <div class="menu">
   <%= link_to "Back", books_path %>
+  </div>
+</main>
 
