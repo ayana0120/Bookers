@@ -1,6 +1,7 @@
 <main class="edit-main">
   <h1>Editing Book</h1>
-  <% if @book.errors.any? %>
+    <%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
+    <% if @book.errors.any? %>
     <ul>
       <% @book.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -8,7 +9,6 @@
     </ul>
   <% end %>
   <body class="edit-body">
-    <%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
       <div class="form-title">Title</div>
         <%= f.text_field :title %>
       <div class="form-body">Body</div>
