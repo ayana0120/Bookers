@@ -1,24 +1,25 @@
-<main class="show-page">
+<main class="show-main">
 <% if flash[:complete] %>
   <div class="flash">
     <%= flash[:complete] %>
   </div>
 <% end %>
-<table cellspacing="10">
-  <tr>
-    <td><b>Title:</b></td>
-    <td><%= @book.title %></td>
-  </tr>
-  	<td><b>Body:</b></td>
-  	<td><%= @book.body %></td>
+  <table class="show-table" cellspacing="10">
+    <tr>
+      <td><b>Title:</b></td>
+      <td><%= @book.title %></td>
+    </tr>
+    <tr>
+  	  <td><b>Body:</b></td>
+  	  <td><%= @book.body %></td>
     </tr>
   </table>
   <div class="menu">
-  <%= link_to "Edit", edit_book_path(@book) %>
+    <%= link_to "Edit", edit_book_path(@book) %>
   </div>
-  |
+   |
   <div class="menu">
-  <%= link_to "Back", books_path %>
+    <%= link_to "Back", books_path %>
   </div>
 </main>
 

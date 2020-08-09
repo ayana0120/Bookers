@@ -1,4 +1,4 @@
-<main class="edit-page">
+<main class="edit-main">
   <h1>Editing Book</h1>
   <% if @book.errors.any? %>
     <ul>
@@ -7,20 +7,22 @@
       <% end %>
     </ul>
   <% end %>
-  <%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
-  <body class="edit">
-  <div>Title</div>
-  <%= f.text_field :title %>
-  <div>Body</div>
-  <%= f.text_area :body %><br>
-  <%= f.submit "Update Book" %>
-  <% end %>
-  <div class="menu">
-  <%= link_to "Show", show_book_path(@book.id) %>
-  </div>
-  |
-  <div class="menu">
-  <%= link_to "Back", books_path %>
-  </div>
-</body>
+  <body class="edit-body">
+    <%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
+      <div class="form-title">Title</div>
+        <%= f.text_field :title %>
+      <div class="form-body">Body</div>
+        <%= f.text_area :body %><br>
+      <div class="upload">
+        <%= f.submit " Update Book" %>
+      </div>
+    <% end %>
+    <div class="menu">
+      <%= link_to "Show", show_book_path(@book.id) %>
+    </div>
+      |
+    <div class="menu">
+      <%= link_to "Back", books_path %>
+    </div>
+  </body>
 </main>

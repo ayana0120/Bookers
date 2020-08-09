@@ -27,32 +27,43 @@ clearfix::after {
   font-size: 26px;
   margin: 25px 35px 5px;
 }
-.start, .top-text, .show, .show-page {
+.start, .top-text {
   font-size: 13px;
   margin: 0px 65px;
   line-height: 3;
 }
-.edit-page {
-  margin: 20px 0px 0px 35px ;
-  line-height: 2;
-}
-.index-page {
+.index-main {
   margin-left: 35px;
-}
-th {
-  text-align: center;
-}
-.title {
-  width: 150px;
-}
-.body {
-  width: 450px;
-}
-.index, .edit {
   font-size: 13px;
 }
+.form-title, .edit-body {
+  font-size: 13px;
+}
+.form-body {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.flash {
+  font-size: 13px;
+  margin-left: 40px;
+  color: #007B50;
+}
+.upload {
+  margin: 10px 0;
+}
+.show-main {
+  font-size: 13px;
+  margin: 30px 30px 0px;
+  line-height: 3;
+}
+.show-table {
+  margin: 0px 30px;
+}
 .menu {
+  font-size: 13px;
   display: inline-block;
-  cursor: pointer;
   text-decoration: underline;
+}
+.edit-main {
+  margin: 30px 30px 0px;
 }
