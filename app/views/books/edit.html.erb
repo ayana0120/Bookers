@@ -2,22 +2,23 @@
   <h1>Editing Book</h1>
     <%= form_for(@book, url:"/books/#{@book.id}") do |f| %>
     <% if @book.errors.any? %>
-    <%= @book.errors.count %> prohibited this article from being saved:
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
-  <body class="edit-body">
-      <div class="form-title">Title</div>
-        <%= f.text_field :title %>
-      <div class="form-body">Body</div>
-        <%= f.text_area :body %><br>
-      <div class="upload">
-        <%= f.submit " Update Book" %>
+      <div class="error">
+        <h3><%= @book.errors.count %> prohibited this article from being saved:</h3>
+        <ul>
+          <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
       </div>
     <% end %>
+    <div class="form-title">Title</div>
+      <%= f.text_field :title %>
+    <div class="form-body">Body</div>
+      <%= f.text_area :body %><br>
+    <div class="upload">
+      <%= f.submit " Update Book" %>
+    </div>
+  <% end %>
     <div class="menu">
       <%= link_to "Show", show_book_path(@book.id) %>
     </div>
