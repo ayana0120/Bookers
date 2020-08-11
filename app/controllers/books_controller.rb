@@ -8,7 +8,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     if @book.save
       flash[:complete]="Book was successfully created."
-      redirect_to book_path(book)
+      redirect_to book_path(@book)
     else
       @books = Book.all
       render :index
@@ -27,10 +27,10 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     if @book.update(book_params)
       flash[:complete]="Book was successfully updated."
-      redirect_to book_path(book)
+      redirect_to book_path(@book)
     else
       @books = Book.all
-      render book_path(book)
+      render :edit
     end
   end
 
