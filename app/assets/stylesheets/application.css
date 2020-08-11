@@ -45,7 +45,8 @@ clearfix::after {
 }
 .flash {
   font-size: 13px;
-  margin-left: 40px;
+  margin-top: 30px;
+  margin-left: 60px;
   color: #007B50;
 }
 .upload {
